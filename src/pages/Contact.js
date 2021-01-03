@@ -7,7 +7,7 @@ export default class About extends Component {
       <Container>
         <Row>
           <Col md={6}>
-            <h5>Kontaktinė informacij</h5>
+            <h5>Kontaktinė informacija</h5>
             <p>
               <b>Adresas</b>
             </p>
