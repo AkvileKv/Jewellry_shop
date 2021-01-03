@@ -17,7 +17,6 @@ class App extends React.Component {
     return (
       <Provider store={store}>
         <BrowserRouter>
-          {/* <div className="grid-container"> */}
           <Header />
           <Route exact path="/" component={Home} />
           <Route exact path="/prekes" component={Products} />

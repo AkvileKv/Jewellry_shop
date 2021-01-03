@@ -16,7 +16,7 @@ class Product extends Component {
     return (
       <Container>
         {!this.props.product ? (
-          <div>Loading...</div>
+          <div>Kraunama prekė...</div>
         ) : (
           <Row>
             <Col lg={5}>

@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { compose } from "redux";
+import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { filterProducts, sortProducts } from "../actions/productActions";
 
@@ -27,36 +29,37 @@ class Filter extends Component {
             <option value="highest">Brangiausios viršuje</option>
           </select>
         </div>
-        {/* <div className="filter-size">
-          Filter{" "}
+        <div className="filter-category">
+          Kategorija{" "}
           <select
-            value={this.props.size}
+            value={this.props.category}
             onChange={(e) =>
               this.props.filterProducts(this.props.products, e.target.value)
             }
           >
-            <option value="">ALL</option>
-            <option value="XS">XS</option>
-            <option value="S">S</option>
-            <option value="M">M</option>
-            <option value="L">L</option>
-            <option value="XL">XL</option>
-            <option value="XXL">XXL</option>
+            <option value="">Visos</option>
+            <option value="earrings">Auskarai</option>
+            <option value="bracelets">Apyrankės</option>
+            <option value="necklaces">Grandinėlės</option>
           </select>
-        </div> */}
+        </div>
       </div>
     );
   }
 }
-export default connect(
-  (state) => ({
-    size: state.products.size,
-    sort: state.products.sort,
-    products: state.products.items,
-    filteredProducts: state.products.filteredItems,
-  }),
-  {
-    filterProducts,
-    sortProducts,
-  }
+
+export default compose(
+  withRouter,
+  connect(
+    (state) => ({
+      category: state.products.category,
+      sort: state.products.sort,
+      products: state.products.items,
+      filteredProducts: state.products.filteredItems,
+    }),
+    {
+      filterProducts,
+      sortProducts,
+    }
+  )
 )(Filter);

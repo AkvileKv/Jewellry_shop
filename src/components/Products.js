@@ -13,7 +13,7 @@ class Products extends Component {
     return (
       <>
         {!this.props.products ? (
-          <div>Loading...</div>
+          <div>Kraunamos prekės...</div>
         ) : (
           <Row>
             {this.props.products.slice(0, this.props.limit).map((product) => (

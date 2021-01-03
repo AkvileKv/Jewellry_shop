@@ -15,35 +15,7 @@ const Header = () => {
             </div>
           </div>
           <div className="col-md-6">
-            <nav className="header__menu">
-              <ul>
-                <li>
-                  <Link className="text-link" to="/">
-                    Pradinis
-                  </Link>
-                </li>
-                <li>
-                  <Link className="text-link" to="/auskarai">
-                    Auskarai
-                  </Link>
-                </li>
-                <li>
-                  <Link className="text-link" to="/pakabukai">
-                    Pakabukai
-                  </Link>
-                </li>
-                <li>
-                  <Link className="text-link" to="/ziedai">
-                    Žiedai
-                  </Link>
-                </li>
-                <li>
-                  <Link className="text-link" to="/grandineles">
-                    Grandinėlės
-                  </Link>
-                </li>
-              </ul>
-            </nav>
+            <nav className="header__menu"></nav>
           </div>
           <div className="col-md-4 align-self-center">
             <div className="header__right">

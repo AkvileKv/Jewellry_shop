@@ -1,14 +1,13 @@
 import { FETCH_PRODUCTS } from "../types";
 import {
   GET_PRODUCT_BY_ID,
-  FILTER_PRODUCTS_BY_SIZE,
+  FILTER_PRODUCTS_BY_CATEGORY,
   ORDER_PRODUCTS_BY_PRICE,
 } from "../types";
 
 export const fetchProducts = () => async (dispatch) => {
   const res = await fetch("/api/products");
   const data = await res.json();
-  console.log(data);
   dispatch({
     type: FETCH_PRODUCTS,
     payload: data,
@@ -18,22 +17,21 @@ export const fetchProducts = () => async (dispatch) => {
 export const getProductById = (id) => async (dispatch) => {
   const res = await fetch("/api/products/" + id);
   const product = await res.json();
-  console.log(product);
   dispatch({
     type: GET_PRODUCT_BY_ID,
     payload: product,
   });
 };
 
-export const filterProducts = (products, size) => (dispatch) => {
+export const filterProducts = (products, category) => (dispatch) => {
   dispatch({
-    type: FILTER_PRODUCTS_BY_SIZE,
+    type: FILTER_PRODUCTS_BY_CATEGORY,
     payload: {
-      size: size,
+      category: category,
       items:
-        size === ""
+        category === ""
           ? products
-          : products.filter((x) => x.availableSizes.indexOf(size) >= 0),
+          : products.filter((x) => x.categories.indexOf(category) >= 0),
     },
   });
 };
@@ -52,7 +50,6 @@ export const sortProducts = (filteredProducts, sort) => (dispatch) => {
         : 1
     );
   }
-  console.log(sortedProducts);
   dispatch({
     type: ORDER_PRODUCTS_BY_PRICE,
     payload: {
