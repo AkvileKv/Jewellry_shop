@@ -20,7 +20,7 @@ class Orders extends Component {
               <th>UŽSAKYMO ID</th>
               <th>DATA</th>
               <th>IŠ VISO</th>
-              <th>TESTVARDAS</th>
+              <th>VARDAS</th>
               <th>EL. PAŠTAS</th>
               <th>ADRESAS</th>
               <th>PREKĖS</th>
