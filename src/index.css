@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Euphoria+Script&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
+
+/* Global */
+
+html,
+body {
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 70px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+p {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+p,
+label,
+.text-link,
+.nav-item,
+.nav-item:hover,
+input::placeholder,
+textarea::placeholder {
+  color: #444;
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+  color: transparent;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+.text-link:hover,
+.text-link:focus,
+.theme-button:hover {
+  text-decoration: none;
+  outline: none;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.set-bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+.theme-button {
+  font-size: 14px;
+  border: none;
+  text-transform: capitalize;
+  color: #ffffff;
+  background: #ca1515;
+  font-weight: 500;
+  padding: 12px 30px;
+  border-radius: 50px;
+  display: inline-block;
+}
+
+.theme-button:hover {
+  color: #ffffff;
+}
+
+.alert {
+  margin-top: 18px;
+  margin-bottom: 0;
+  width: fit-content;
+  font-size: 14px;
+  padding: 8px 14px;
+  display: none;
+}

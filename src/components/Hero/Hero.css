@@ -1,0 +1,29 @@
+.hero {
+  overflow: hidden;
+  background-color: #fcdce1;
+}
+
+.hero__image {
+  height: 500px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
+  background-size: 360px;
+}
+
+.hero__text {
+  max-width: 470px;
+}
+
+.hero__text h1 {
+  font-family: "Cookie", cursive;
+  color: #111111;
+  margin-bottom: 10px;
+}
+
+.hero__text p {
+  margin-bottom: 22px;
+}
